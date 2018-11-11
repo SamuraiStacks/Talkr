@@ -22,6 +22,7 @@ If (name = 0) {
     Else {
         #Persistent
         SetTimer, restart, -4000
+        IniWrite, fName, data.ini, Data, Name
         MsgBox, , Talkr, Reloading...
         return
 
