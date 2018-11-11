@@ -50,5 +50,5 @@ Else {
         ExitApp
     }
     Else
-        MsgBox, , Talkr, "%text%"  
+        MsgBox, , Talkr, "%name%" said "%text%"
 }
