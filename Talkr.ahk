@@ -1,4 +1,4 @@
-InputBox, text, Talkr
+InputBox, text, Talkr, Tell me what you want me to say!
 If ErrorLevel
     MsgBox, , Talkr, Well you pressed the cancel button, so bye!
 Else
