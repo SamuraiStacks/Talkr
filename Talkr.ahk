@@ -1,9 +1,9 @@
 IniRead, name, data.ini, Data, Name
 
 If (name = 0) {
-    InputBox, fName, Talkr, Looks like it is your first time running Talkr! What is your name?
+    InputBox, fName, Talkr - v%version%, Looks like it is your first time running Talkr! What is your name?
     If (ErrorLevel) {
-        MsgBox, , Talkr, Well you pressed the cancel button, so bye!
+        MsgBox, , Talkr - v%version%, Well you pressed the cancel button, so bye!
     }
     Else if (fName = "") {
         Gui, Add, Text, , You did not tell me your name! Exit Talkr or Restart?
@@ -23,7 +23,7 @@ If (name = 0) {
         #Persistent
         SetTimer, restart, -4000
         IniWrite, "%fName%", data.ini, Data, Name
-        MsgBox, , Talkr, Reloading...
+        MsgBox, , Talkr - v%version%, Reloading...
         return
 
         restart:
@@ -34,7 +34,7 @@ If (name = 0) {
 Else {
     InputBox, text, Talkr, Tell me what you want me to say!
     If (ErrorLevel) {
-        MsgBox, , Talkr, Well you pressed the cancel button, so bye!
+        MsgBox, , Talkr - v%version%, Well you pressed the cancel button, so bye!
     }
     Else If (text = "")  {
         Gui, Add, Text, , You did not tell me what to say! Close Talkr or Reload?
@@ -50,5 +50,5 @@ Else {
         ExitApp
     }
     Else
-        MsgBox, , Talkr, %name% said %text%
+        MsgBox, , Talkr - v%version%, %name% said %text%
 }
